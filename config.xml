@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.joshmorony.playgrounds"
+        versionCode = "10" 
+        version     = "2.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Playgrounds SA</name>
+
+    <description>
+        Find a new playground near you
+    </description>
+
+    <author href="http://www.joshmorony.com" email="joshua.morony@gmail.com">
+        Joshua Morony
+    </author>
+
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.transistorsoft.cordova.background-geolocation" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="ch.zhaw.sqlite" version="2.0.0" />
+
+    <!-- Do not auto hide splash on iOS -->
+    <preference name="AutoHideSplashScreen" value="false" />
+    <!-- Do not auto hide splash on Android -->
+    <preference name="SplashScreenDelay" value="10000"/>
+    <preference name="orientation" value="portrait" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="target-device" value="handset" />
+
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen"/>
+        <param name="onload" value="true" />
+    </feature>
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+
+    <icon src="icon.png" /> 
+    
+    <icon src="resources/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="resources/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="resources/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="resources/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
+    <icon src="resources/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="resources/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="resources/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="resources/icon/ios/icon-120.png"           gap:platform="ios"        width="120" height="120" />
+    <icon src="resources/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+
+    <gap:splash src="splash/ios/Default.png"                       gap:platform="ios"       width="320" height="480" />
+    <gap:splash src="splash/ios/Default@2x.png"                    gap:platform="ios"       width="640" height="960" />
+    <gap:splash src="splash/ios/Default-568h@2x.png"               gap:platform="ios"       width="640" height="1136" />
+    
+    <gap:splash src="splash/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="splash/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="splash/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="splash/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
+
+    <access origin="*"/>
+
+</widget>
